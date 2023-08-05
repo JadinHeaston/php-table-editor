@@ -1,0 +1,74 @@
+:root {
+	--background-color: #919596;
+	--font-color: black;
+	--main-height: 90vh;
+}
+
+.no-text-select {
+	/* iOS Safari */
+	-webkit-touch-callout: none;
+	/* Safari */
+	-webkit-user-select: none;
+	/* Konqueror HTML */
+	-khtml-user-select: none;
+	/* Old versions of Firefox */
+	-moz-user-select: none;
+	/* Internet Explorer/Edge */
+	-ms-user-select: none;
+	/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+	user-select: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+label.required::after {
+	content: " *";
+	color: #e32;
+	vertical-align: middle;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--font-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	--scrollbar-width: calc(100vw - 100%);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - var(--main-height));
+	width: 100%;
+}
+
+main {
+	max-width: calc(100vw - var(--scrollbar-width));
+}
+
+h2 {
+	text-align: center;
+}
+
+#person-edit {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 50%;
+}
+
+#person-edit>* {
+	flex-basis: 50%;
+	margin-bottom: .75rem;
+	margin-top: .75rem;
+}
+
+#person-edit input {
+	width: 100%;
+}
